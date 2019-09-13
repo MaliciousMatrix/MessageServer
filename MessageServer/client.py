@@ -10,7 +10,6 @@ def receive():
     """Handles receiving of messages."""
     while True:
         try:
-            #msg = client_socket.recv(BUFSIZ).decode("utf8")
             chat = pickle.loads(client_socket.recv(BUFSIZ))
             msg_list.insert(tkinter.END, chat.message)
         except OSError:  # Possibly client has left the chat.

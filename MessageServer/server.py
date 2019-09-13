@@ -31,7 +31,6 @@ def handle_client(client):  # Takes client socket as argument.
         if msg != '{quit}':
             broadcast(msg, name+': ')
         else:
-            #client.send(bytes('{quit}', 'utf8'))
             client.close()
             del clients[client]
             broadcast('%s has left the chat.' % name)
@@ -42,7 +41,6 @@ def broadcast(msg, prefix=''):  # prefix is for name identification.
     print(msg)
     p_chat = pickle.dumps(Chat(msg, 'who knows'))
     for sock in clients:
-        #message = prefix + msg
         sock.send(p_chat)
 
 clients = {}
