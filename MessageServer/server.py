@@ -12,7 +12,6 @@ def accept_incoming_connections():
         addresses[client] = client_address
         Thread(target=handle_client, args=(client,)).start()
 
-
 def handle_client(client):  # Takes client socket as argument.
     """Handles a single client connection."""
 
@@ -41,7 +40,6 @@ def broadcast(msg, prefix=''):  # prefix is for name identification.
         message = prefix + msg
         sock.send(bytes(str(prefix) + msg, "utf8"))
 
-        
 clients = {}
 addresses = {}
 

@@ -1,4 +1,5 @@
 import datetime
+
 class Chat:
     def __init__(self, message, sender):
         self._message = message

@@ -4,7 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b3c9d0ee-c822-4b24-86ba-1d377063d9b1</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>MessageServer.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,7 +24,6 @@
   <ItemGroup>
     <Compile Include="chat.py" />
     <Compile Include="client.py" />
-    <Compile Include="MessageServer.py" />
     <Compile Include="server.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
