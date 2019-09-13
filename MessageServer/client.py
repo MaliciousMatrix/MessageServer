@@ -3,21 +3,25 @@
 from socket import AF_INET, socket, SOCK_STREAM
 from threading import Thread
 import tkinter
+from chat import Chat
+import pickle
 
 def receive():
     """Handles receiving of messages."""
     while True:
         try:
-            msg = client_socket.recv(BUFSIZ).decode("utf8")
-            msg_list.insert(tkinter.END, msg)
+            #msg = client_socket.recv(BUFSIZ).decode("utf8")
+            chat = pickle.loads(client_socket.recv(BUFSIZ))
+            msg_list.insert(tkinter.END, chat.message)
         except OSError:  # Possibly client has left the chat.
             break
 
 def send(event=None):  # event is passed by binders.
     """Handles sending of messages."""
     msg = my_msg.get()
+    chat = Chat(msg, 'my name')
     my_msg.set("")  # Clears input field.
-    client_socket.send(bytes(msg, "utf8"))
+    client_socket.send(pickle.dumps(chat))
     if msg == "{quit}":
         client_socket.close()
         top.quit()
