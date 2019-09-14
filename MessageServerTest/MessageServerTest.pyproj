@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>b3c9d0ee-c822-4b24-86ba-1d377063d9b1</ProjectGuid>
+    <ProjectGuid>94ca22a0-8db2-438e-a55a-4f144134ac86</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>
     </StartupFile>
@@ -10,8 +10,8 @@
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>MessageServer</Name>
-    <RootNamespace>MessageServer</RootNamespace>
+    <Name>MessageServerTest</Name>
+    <RootNamespace>MessageServerTest</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,12 +22,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="chat.py" />
-    <Compile Include="client.py" />
-    <Compile Include="network_request.py">
+    <Compile Include="tester.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="server.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MessageServer\MessageServer.pyproj">
+      <Name>MessageServer</Name>
+      <Project>{b3c9d0ee-c822-4b24-86ba-1d377063d9b1}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
