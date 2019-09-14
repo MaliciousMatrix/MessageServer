@@ -1,9 +1,12 @@
 import uuid
 
 """ An individual sensor or actuator that does something"""
-class Compnonent:
+class Component:
     def __init__(self, guid, name, *args, **kwargs):
-        assert type(guid) is uuid.UUID
+        assert type(guid) is uuid.UUID, 'guid must be a GUID'
+        assert type(name) is str, 'name must be a string. Supplied: ' + str(name)
+        assert not name.isspace(), 'name must not be empty space. Supplied: ' + str(name)
+        assert name, 'name must not be an empty string.'
         self._guid = guid
         self._name = name
 

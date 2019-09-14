@@ -43,6 +43,9 @@
     <Compile Include="power_sensor.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="relay.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="switch.py">
       <SubType>Code</SubType>
     </Compile>
