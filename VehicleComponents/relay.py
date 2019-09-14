@@ -1,13 +1,18 @@
-from component import Compnonent
+from component import Component
+from enum import Enum
+
+class RelayState(Enum):
+    OPEN = 0
+    CLOSED = 1
 
 class Relay(Component):
-    def __init__(self, guid, name, gpio_pin, initial_state = RelayState.OPEN *args, **kwargs):
+    def __init__(self, guid, name, gpio_pin, initial_state = RelayState.OPEN, *args, **kwargs):
         self.state = initial_state
         self._gpio_pin = gpio_pin
         return super().__init__(guid, name, *args, **kwargs)
 
+    #TODO: Change this method to use GPIO.
     _state = RelayState.OPEN
-    # Change this method to use GPIO pin when you can. 
     def get_state(self):
         return self._state
     def set_state(self, new_state):
@@ -20,12 +25,15 @@ class Relay(Component):
         return self._gpio_pin
     gpio_pin = property(get_gpio_pin)
 
-    def toggle():
-        pass
+    def toggle(self):
+        if self.state == RelayState.OPEN:
+            self.state = RelayState.CLOSED
+        else: # Current state is closed
+            self.state = RelayState.OPEN
 
-    def isOpen():
-        pass
+    def is_open(self):
+        return self.state == RelayState.OPEN
 
-    def isClosed():
-        pass
+    def is_closed(self):
+        return not self.is_open()
 
