@@ -1,4 +1,7 @@
 from relay import Relay, RelayState
+import sys, os
+sys.path.append(os.getcwd() + '\\..\\CommonFunctions')
+from event import Event
 
 """ mocks a relay which has two states: on and off"""
 class RelayVirtual(Relay):
@@ -7,7 +10,9 @@ class RelayVirtual(Relay):
 
     def set_state(self, new_state):
         assert type(new_state) is RelayState
-        self._state = new_state
+        if self.state != new_state:
+            self._state = new_state
+            self.state_changed(new_state)
 
     def get_state(self):
         return self._state

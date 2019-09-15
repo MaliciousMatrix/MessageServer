@@ -17,6 +17,12 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "VehicleComponentTests", "Te
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "VirtualComponentTests", "Tests\VirtualComponentsTest\VirtualComponentTests.pyproj", "{3D4C9BB1-8FD5-4B4C-9564-0211D27F9B8D}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Runner", "Runner\Runner.pyproj", "{537AB1A6-A5CE-496D-809F-3C9E78701F5D}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CommonFunctions", "CommonFunctions\CommonFunctions.pyproj", "{0F1D3E55-478C-4308-AE95-49FDDD060FF6}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "NetworkedComponent", "NetworkedComponent\NetworkedComponent.pyproj", "{B96404C3-4D93-4DF4-908E-AD80DC8B4F2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +41,12 @@ Global
 		{F783E3AC-7B1C-41DC-BE6C-B076B12B6987}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D4C9BB1-8FD5-4B4C-9564-0211D27F9B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3D4C9BB1-8FD5-4B4C-9564-0211D27F9B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{537AB1A6-A5CE-496D-809F-3C9E78701F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{537AB1A6-A5CE-496D-809F-3C9E78701F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F1D3E55-478C-4308-AE95-49FDDD060FF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F1D3E55-478C-4308-AE95-49FDDD060FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B96404C3-4D93-4DF4-908E-AD80DC8B4F2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B96404C3-4D93-4DF4-908E-AD80DC8B4F2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
